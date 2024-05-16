@@ -2,6 +2,8 @@ import React from 'react'
 import Card from './Card'
 import GraphSection from './GraphSection'
 import Inventory from './Inventory'
+import GenderRatio from './GenderRatio'
+import Transactions from './Transactions'
 
 type Props = {}
 
@@ -38,6 +40,10 @@ const AdminDashboard = (props: Props) => {
        <div className='w-full flex gap-5 '>
           <GraphSection/>
           <Inventory/>
+       </div>
+       <div className='w-full flex gap-5 '>
+          <GenderRatio/>
+          <Transactions/>
        </div>
     </div>
   )
