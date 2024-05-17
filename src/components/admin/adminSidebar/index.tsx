@@ -57,7 +57,7 @@ const adminSidebardata = [
 const Sidebar = (props: Props) => {
   return (
     <div className='flex flex-col gap-5'>
-        <div className='text-2xl font-bold '>
+        <div className='text-2xl font-bold py-5'>
             LOGO
         </div>
         <div className='flex flex-col gap-4'>

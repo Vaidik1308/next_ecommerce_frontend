@@ -1,12 +1,12 @@
 import React from 'react'
 import CategoryItem from './CategoryItem'
-import { dummyData } from '@/libs/data/dummyData'
+import { dummyData } from '@/lib/data/dummyData'
 
 type Props = {}
 
 const Inventory = (props: Props) => {
   return (
-    <div className='flex-1 bg-white p-2 rounded-lg flex flex-col justify-start gap-5 items-center'>
+    <div className='flex-1 bg-white p-2 rounded-lg flex flex-col justify-start gap-5 items-center py-5'>
         <h1 className='text-2xl tracking-widest uppercase font-extralight'>Inventory</h1>
         <div>
         {dummyData.categories.map((i) => (

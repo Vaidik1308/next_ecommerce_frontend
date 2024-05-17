@@ -7,7 +7,7 @@ type Props = {}
 
 const GenderRatio = (props: Props) => {
   return (
-    <div className='flex-1 bg-white p-2 rounded-lg flex flex-col justify-center items-center relative'>
+    <div className='flex-1 py-5 bg-white p-2 rounded-lg flex flex-col justify-center items-center relative gap-10'>
         <h1 className='text-2xl tracking-widest uppercase font-extralight'>Gender Ratio</h1>
         <DoughnutChart
             labels={["Female", "Male"]}
