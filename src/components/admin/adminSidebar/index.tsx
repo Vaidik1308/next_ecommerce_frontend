@@ -23,7 +23,7 @@ const adminSidebardata = [
             {
                 subLabel:"Customers",
                 icon:<FaPeopleGroup/>,
-                pathname:"/admin/customer"
+                pathname:"/admin/customers"
             },
             {
                 subLabel:"Transactions",

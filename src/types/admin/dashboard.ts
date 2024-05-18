@@ -6,30 +6,29 @@ export type CardType = {
     amount?: boolean;
 }
 export type Product = {
-    id?: string;
+    id: string;
     name: string;
     price: number;
     stock: string;
-    action:"Manage" | "delete";
-    email?: string;
+    action:string;
     image:string
   }
 export type Customer = {
-    id?: string;
+    id: string;
     image:string
     name: string;
     gender: "Male" | "Female" | "Other";
     email: string;
-    Role: "User" | "Admin";
-    action:"Manage" | "delete";
+    role: "User" | "Admin";
+    action:string;
   }
 export type Transaction = {
-    id?: string;
+    id: string;
     name: string;
     stock: string;
     discount:number;
     gender: "Male" | "Female" | "Other";
     email: string;
     status: "Pending" | "Success" | "Failed";
-    action:"Manage" | "delete";
+    action:string;
   }

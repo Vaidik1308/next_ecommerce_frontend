@@ -16,12 +16,12 @@ import Image from "next/image";
 import Link from "next/link"
 import { ArrowUpDown } from "lucide-react"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Product } from "@/types/admin/dashboard"
+import { Customer } from "@/types/admin/dashboard"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 
-export const columns: ColumnDef<Product>[] = [
+export const columns: ColumnDef<Customer>[] = [
     {
         id: "select",
         header: ({ table }) => (
@@ -61,37 +61,49 @@ export const columns: ColumnDef<Product>[] = [
     header: "Name",
   },
   {
-    accessorKey: "price",
+    accessorKey: "email",
     header: ({ column }) => {
         return (
           <Button
             variant="ghost"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
-            Price
+            Email
             <ArrowUpDown className="ml-2 h-4 w-4" />
           </Button>
         )
       },
     cell: ({ row }) => {
-        const price = parseFloat(row.getValue("price"))
-        const formatted = new Intl.NumberFormat("en-IN", {
-          style: "currency",
-          currency: "INR",
-        }).format(price)
+        const email = row.getValue("email") as string
+        
    
-        return <div className="flex justify-start pl-6">{formatted}</div>
+        return <div className="flex justify-start pl-6">{email}</div>
       },
   },
   {
-    accessorKey: "stock",
-    header: "Stock",
+    accessorKey: "gender",
+    header: "Gender",
     cell: ({ row }) => {
-        const stock = parseFloat(row.getValue("stock"))
-        if(stock > 0) {
-            return <div className="">{stock}</div>
+        const gender = row.getValue("gender") as string;
+        if(gender === "Male") {
+            return <div className="">{gender}</div>
+        }else if(gender === "Female"){
+            return <div className="text-red-500">{gender}</div>
         }else{
-            return <div className="text-red-500">{"Out of Stock"}</div>
+            return <div className="">{gender}</div>
+        }
+   
+      },
+  },
+  {
+    accessorKey: "role",
+    header: "Role",
+    cell: ({ row }) => {
+        const role = row.getValue("role") as string;
+        if(role === "Admin") {
+            return <div className="">{role}</div>
+        }else{
+            return <div className="text-red-500">{role}</div>
         }
    
       },
