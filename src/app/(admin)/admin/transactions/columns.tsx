@@ -41,21 +41,7 @@ export const columns: ColumnDef<Transaction>[] = [
             aria-label="Select row"
           />
         ),
-        // enableSorting: false,
-        // enableHiding: false,
       },
-//   {
-//     accessorKey: "image",
-//     header: "Image",
-//     cell: ({ row }) => (
-//         <Image
-//           src={row.original.image}
-//           alt={row.original.name}
-//           width={80}
-//           height={80}
-//         />
-//       ),
-//   },
   {
     accessorKey: "name",
     header: "Name",
@@ -99,9 +85,9 @@ export const columns: ColumnDef<Transaction>[] = [
         if(status === "Pending") {
             return <div className="text-gray-600">{status}</div>
         }else if(status === "Success"){
-            return <div className="text-green-500">{"Out of status"}</div>
+            return <div className="text-green-500">{status}</div>
         }else{
-            return <div className="text-red-500">{"Out of status"}</div>
+            return <div className="text-red-500">{status}</div>
 
         }
    
@@ -129,7 +115,7 @@ export const columns: ColumnDef<Transaction>[] = [
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link href={`/admin/products/${transaction.id as string}`}>Product page</Link>
+                <Link href={`/admin/transactions/${transaction.id as string}`}>transaction page</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

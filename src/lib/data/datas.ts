@@ -251,7 +251,7 @@ export const transactionsData:Transaction[] = [
   {
     id:"fsdffds",
     name:"vadidk",
-    status:"Pending",
+    status:"Failed",
     discount:4500,
     email:"vaidiksinghnirwan@gmail.cmo",
     action:"action",
@@ -269,7 +269,7 @@ export const transactionsData:Transaction[] = [
   {
     id:"fsdffds",
     name:"vadidk",
-    status:"Pending",
+    status:"Failed",
     discount:4500,
     email:"vaidiksinghnirwan@gmail.cmo",
     action:"action",
@@ -278,7 +278,7 @@ export const transactionsData:Transaction[] = [
   {
     id:"fsdffds",
     name:"vadidk",
-    status:"Pending",
+    status:"Success",
     discount:4500,
     email:"vaidiksinghnirwan@gmail.cmo",
     action:"action",

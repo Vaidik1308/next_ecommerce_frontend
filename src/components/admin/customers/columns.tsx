@@ -126,11 +126,11 @@ export const columns: ColumnDef<Customer>[] = [
               <DropdownMenuItem
                 onClick={() => navigator.clipboard.writeText(product.id as string)}
               >
-                Copy product ID
+                Copy Customer ID
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link href={`/admin/products/${product.id as string}`}>Product page</Link>
+                <Link href={`/admin/customers/${product.id as string}`}>Customer page</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
