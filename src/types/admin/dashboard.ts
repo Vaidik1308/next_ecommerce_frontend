@@ -25,9 +25,8 @@ export type Customer = {
 export type Transaction = {
     id: string;
     name: string;
-    stock: string;
+    quantity: string;
     discount:number;
-    gender: "Male" | "Female" | "Other";
     email: string;
     status: "Pending" | "Success" | "Failed";
     action:string;

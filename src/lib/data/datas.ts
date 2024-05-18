@@ -1,4 +1,4 @@
-import { Customer, Product } from "@/types/admin/dashboard";
+import { Customer, Product, Transaction } from "@/types/admin/dashboard";
 
 export  const productsData:Product[] = [
     {
@@ -217,5 +217,71 @@ export const customersData:Customer[] = [
     role:"Admin",
     email:"vaidiksinghni@gmail.com",
     action:"Manage",
+  },
+]
+
+export const transactionsData:Transaction[] = [
+  {
+    id:"fsdffds",
+    name:"harsh",
+    status:"Pending",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
+  },
+  {
+    id:"fsdffds",
+    name:"vadidk",
+    status:"Success",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
+  },
+  {
+    id:"fsdffds",
+    name:"vadidk",
+    status:"Pending",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
+  },
+  {
+    id:"fsdffds",
+    name:"vadidk",
+    status:"Pending",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
+  },
+  {
+    id:"fsdffds",
+    name:"vadidk",
+    status:"Pending",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
+  },
+  {
+    id:"fsdffds",
+    name:"vadidk",
+    status:"Pending",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
+  },
+  {
+    id:"fsdffds",
+    name:"vadidk",
+    status:"Pending",
+    discount:4500,
+    email:"vaidiksinghnirwan@gmail.cmo",
+    action:"action",
+    quantity:"45",
   },
 ]
