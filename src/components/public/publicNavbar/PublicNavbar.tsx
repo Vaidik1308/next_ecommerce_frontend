@@ -30,16 +30,6 @@ const PublicNavbar = (props: Props) => {
             </div>
         </div>
         <div className='flex gap-2 justify-evenly'>
-            {
-                !isAuthenticated && (
-                    <Button variant={"outline"} asChild>
-                        <Link href={"/login"} className='flex items-center gap-2'>
-                            <LogInIcon size={15}/>
-                            <span>Login</span>
-                        </Link>
-                    </Button>
-                )
-            }
             <Button variant={"default"} asChild>
                 <Link href={"/cart"} className='flex items-center gap-2'>
                     <PiTrolleyFill size={15}/>
@@ -58,7 +48,19 @@ const PublicNavbar = (props: Props) => {
                     <span>Become a Seller</span>
                 </Link>
             </Button>
-            <Account/>
+           
+            {
+                !isAuthenticated ? (
+                    <Button variant={"outline"} asChild>
+                        <Link href={"/login"} className='flex items-center gap-2'>
+                            <LogInIcon size={15}/>
+                            <span>Login</span>
+                        </Link>
+                    </Button>
+                ) : (
+                    <Account/>
+                )
+            }
         </div>
     </div>
   )
