@@ -13,6 +13,10 @@ const CartList = (props: Props) => {
         <SingleCartList/>
         <SingleCartList/>
         <SingleCartList/>
+        <SingleCartList/>
+        <SingleCartList/>
+        <SingleCartList/>
+        <SingleCartList/>
       </div>
     </div>
   )

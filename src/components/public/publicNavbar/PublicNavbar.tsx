@@ -22,7 +22,9 @@ const PublicNavbar = (props: Props) => {
             {/* LOGO */}
             <div>
                 <h1 className='text-2xl font-bold'>
-                    LOGO
+                    <Link href={"/"}>
+                        LOGO    
+                    </Link>
                 </h1>
             </div>
             <div className='w-[75%]'>
@@ -43,7 +45,7 @@ const PublicNavbar = (props: Props) => {
                 </Link>
             </Button>
             <Button variant={"link"} asChild>
-                <Link href={"/"} className='flex items-center gap-2'>
+                <Link href={"/cart"} className='flex items-center gap-2'>
                     <FaShopify size={15}/>
                     <span>Become a Seller</span>
                 </Link>
