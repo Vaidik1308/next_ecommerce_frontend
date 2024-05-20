@@ -4,7 +4,7 @@ import { hostname } from 'os';
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ['images.unsplash.com'],
+        domains: ['images.unsplash.com','rukminim2.flixcart.com','imgs.search.brave.com'],
     },
 };
 

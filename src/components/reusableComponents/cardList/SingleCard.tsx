@@ -9,9 +9,9 @@ type Props = {
 const SingleCard = ({children}: Props) => {
   return (
     <div className='bg-white  rounded-md shadow-lg w-fit group '>
-        <Link className='w-full flex flex-col ' href={"/"}>
+        <div className='w-full flex flex-col'>
             {children}
-        </Link>
+        </div>
     </div>
   )
 }

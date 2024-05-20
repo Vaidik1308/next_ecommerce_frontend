@@ -3,6 +3,7 @@ export type LatestProductType = {
     name:string;
     price:string;
     image:string;
+    slug:string
 }
 
 export type Category = {
@@ -10,4 +11,25 @@ export type Category = {
     categoryName:string;
     image:string;
     slug:string;
+}
+
+export type ProductDetails = {
+
+}
+
+export type ProductCardData = {
+    freeDelivery:boolean
+    keyFeatures:string
+}
+
+export type ProductProps = {
+    productId:string;
+    photo:string;
+    name:string;
+    price:number;
+    stock:number;
+    discount:number
+    handler: () => void;
+    // productDetails:ProductDetails
+    // productCardData:ProductCardData
 }
