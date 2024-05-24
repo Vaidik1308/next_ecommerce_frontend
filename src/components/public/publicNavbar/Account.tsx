@@ -21,7 +21,7 @@ import Link from "next/link"
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="rounded-full border-black border-[1px] outline-none focus:ring-offset-0 focus:outline-none ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0">
+          <Button variant="ghost" className="rounded-full border-black border-[1px] outline-none focus:ring-offset-0 focus:outline-none ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 size-10 p-0">
             <IoPerson/>
           </Button>
         </DropdownMenuTrigger>

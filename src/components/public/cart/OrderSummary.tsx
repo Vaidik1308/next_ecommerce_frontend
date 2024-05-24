@@ -1,7 +1,7 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
 import { VscError } from 'react-icons/vsc'
 
@@ -9,7 +9,19 @@ type Props = {}
 
 const OrderSummary = (props: Props) => {
   const [couponCode,setCouponCode] = useState<string>("")
-  const [isValidCouponCode,setIsValidCouponCode] = useState<boolean>(true)
+  const [isValidCouponCode,setIsValidCouponCode] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const timeOutId = setTimeout(() => {
+      if(Math.random() > 0.5) setIsValidCouponCode(true);
+      else setIsValidCouponCode(false);
+    },1000)
+
+    return () => {
+      clearTimeout(timeOutId);
+      setIsValidCouponCode(false)
+    }
+  },[couponCode])
   return (
     <div className='flex-[1.5] overflow-y-auto h-[90vh] p-2 px-4 shadow-lg justify-between min-h-[80vh] flex flex-col'>
       <div className='border-b-[2px] border-gray-300 pb-4'>
@@ -17,30 +29,34 @@ const OrderSummary = (props: Props) => {
               Order Summary
         </h1>
         <div className='w-full flex flex-col gap-4'>
-          <div>
+          <form className='flex items-center gap-1'>
             <Input 
               type='text' 
               value={couponCode} 
               onChange={(e) => setCouponCode(e.target
               .value)}
               placeholder='Apply Coupon...'
+              className='outline-none uppercase'
             />
-          </div>
+            <Button variant={"default"} type='submit'>Apply</Button>
+          </form>
           {
-            couponCode && isValidCouponCode ? (
-              <div className='flex items-start gap-2 flex-col'>
-                <span className='bg-green-200 shadow-lg p-1 px-2 rounded-lg flex items-center gap-1 text-green-600'>
-                  <FaCheckCircle />
-                  Coupon Applied!</span>
-                <span className='flex gap-1 items-center font-semibold text-gray-500'>
-                  Rs. {"2000"} off using the <code className='font-bold px-2 shadow-lg uppercase text-black bg-gray-100 p-1 rounded-lg'>{couponCode}</code>
-                </span>
-              </div>
-            ) : (
-              <div className=' shadow-lg flex gap-1 items-center bg-red-200 p-1 px-2 rounded-lg w-fit'>
-                <VscError className='text-red-500'/>
-                <span className='text-red-500'>Invalid Coupon</span>
-              </div>
+            couponCode && (
+              isValidCouponCode ? (
+                <div className='flex items-start gap-2 flex-col'>
+                  <span className='bg-green-200 shadow-lg p-1 px-2 rounded-lg flex items-center gap-1 text-green-600'>
+                    <FaCheckCircle />
+                    Coupon Applied!</span>
+                  <span className='flex gap-1 items-center font-semibold text-gray-500'>
+                    Rs. {"2000"} off using the <code className='font-bold px-2 shadow-lg uppercase text-black bg-gray-100 p-1 rounded-lg'>{couponCode}</code>
+                  </span>
+                </div>
+              ) :  (
+                <div className=' shadow-lg flex gap-1 items-center bg-red-200 p-1 px-2 rounded-lg w-fit'>
+                  <VscError className='text-red-500'/>
+                  <span className='text-red-500'>Invalid Coupon</span>
+                </div>
+              )
             )
           }
           <div className='bg-gray-100 p-2 px-4 rounded-lg shadow-md w-[80%]'>

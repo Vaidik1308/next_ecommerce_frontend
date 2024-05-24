@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@radix-ui/react-dropdown-menu"
 import { FaSearch } from "react-icons/fa"
+import { Button } from "@/components/ui/button"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -91,6 +92,9 @@ export function SearchBar() {
                         placeholder="shirt,phone,laptop,etc"
                     />
                 </div>
+                <Button type="submit">
+                    Search
+                </Button>
             </form>
           </NavigationMenuContent>
         </NavigationMenuItem>

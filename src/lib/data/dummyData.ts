@@ -1,4 +1,4 @@
-import { Category, LatestProductType } from "@/types/client"
+import { Category, GenderType, LatestProductType } from "@/types/client"
 
 export const dummyData= {
     "categories": [
@@ -159,6 +159,22 @@ export const categories:Category[] = [
     categoryName:"More",
     image:"https://images.unsplash.com/photo-1525011268546-bf3f9b007f6a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXJyb3clMjByaWdodHxlbnwwfHwwfHx8MA%3D%3D",
     slug:"All"
+  },
+]
+
+
+export const genderData:GenderType = [
+  {
+    value:"Female",
+    label:"Female",
+  },
+  {
+    value:"Other",
+    label:"Other",
+  },
+  {
+    value:"Male",
+    label:"Male",
   },
 ]
   

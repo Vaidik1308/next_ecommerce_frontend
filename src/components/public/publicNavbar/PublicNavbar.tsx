@@ -15,7 +15,7 @@ type Props = {}
 
 const PublicNavbar = (props: Props) => {
 
-    let isAuthenticated = false
+    let isAuthenticated = false;
   return (
     <div className='w-[90%] mx-auto p-4 flex items-center justify-between'>
         <div className='flex items-center gap-5 w-[30%]'>

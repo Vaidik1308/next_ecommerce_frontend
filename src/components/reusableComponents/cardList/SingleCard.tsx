@@ -10,8 +10,8 @@ const SingleCard = ({children}: Props) => {
   return (
     <div className='bg-white  rounded-md shadow-lg w-fit group '>
         <div className='w-full flex flex-col'>
-            {children}
         </div>
+            {children}
     </div>
   )
 }

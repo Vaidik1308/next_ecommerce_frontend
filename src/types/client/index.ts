@@ -33,3 +33,8 @@ export type ProductProps = {
     // productDetails:ProductDetails
     // productCardData:ProductCardData
 }
+export type SingleGenderType = {
+    label:"Male" | "Female" | "Other";
+    value:"Male" | "Female" | "Other";
+}
+export type GenderType = SingleGenderType[]
